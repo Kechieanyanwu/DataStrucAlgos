@@ -1,0 +1,1 @@
+# divide and conquer is a recursive technique used to solve problems
