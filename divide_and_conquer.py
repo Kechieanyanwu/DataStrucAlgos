@@ -13,7 +13,7 @@ def sum(arr): #recursive sum array function
 
 # print(sum([1,2,4,5]))
 
-def count_array_items(arr): #recursive function to count arrays in a list
+def count_array_items(arr): #recursive function to count items in a list
     if arr == []:
         return 0
     else: 
