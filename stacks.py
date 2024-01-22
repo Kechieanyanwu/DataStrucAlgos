@@ -54,3 +54,41 @@ def push_to_bottom(stack, element):
 
 
 print(reverse_stack(['g','n', 'i', 'r', 't', 's']))
+
+
+def remove_duplicates(string):
+    # initialise a stack with the first character in the string
+    if len(string) == 1:
+        return string
+    
+    # initialise an empty stack 
+    stack = [] 
+    # traverse the length of the string
+    for i in range(0, len(string)):
+        # if the stack is empty, add the current character
+        if len(stack) == 0: 
+            stack.append(string[i])
+        else: 
+            # if not, compare the last item in the stack and the next character in the string
+                if stack[-1] == string[i]:
+                    # remove the character from the stack
+                    stack.pop()
+                else: 
+                    # append the character to the stack
+                    stack.append(string[i])
+    return "".join(stack)
+
+
+# alternative
+# def remove_duplicates(string):
+#     stack = []
+#     for char in string:
+#         if stack and stack[-1] == char:
+#             stack.pop()
+#         else:
+#             stack.append(char)
+    
+#     return "".join(stack)
+
+print(remove_duplicates('g'))
+print(remove_duplicates('vvg'))
